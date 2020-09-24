@@ -1,0 +1,10 @@
+version: '3'
+services:
+  php-cli:
+    build: .docker/
+    volumes:
+      - ./:/media
+      - composercache:/root/.composer
+    entrypoint: tail -f /dev/null
+volumes:
+  composercache:
